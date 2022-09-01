@@ -2,6 +2,7 @@
     font-family: "Roboto Serif", sans-serif;
     padding: 0;
     margin: 0;
+    transition: all 0.1s ease-in-out;
 }
 
 .sidebar {
@@ -117,6 +118,15 @@
 
 .main-container {
     margin-left: 256px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -221,20 +231,16 @@ header {
     color: rgb(110, 110, 110);
 }
 
-.table-filter .material-icons:hover {
-    cursor: pointer;
-    color: black;
-}
-
 .material-icons-label {
     display: flex;
     align-items: center;
 }
 
+.table-filter .material-icons:hover,
 .material-icons-label:hover,
 .material-icons-label:hover .material-icons{
     cursor: pointer;
-    color: black;
+    color: rgb(29, 56, 174);
 }
 
 .btn--add {
@@ -266,4 +272,129 @@ header {
     background-color: rgb(41, 57, 154);
     top: 0;
     right: 36px;
+}
+
+.table-container {
+    flex: 1;
+    overflow: scroll;
+}
+
+table {
+    width: 100%;
+    height:100%;
+}
+
+thead tr {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border-top: 1px solid rgb(225,225,225);
+    padding: 16px;
+    color: rgb(110, 110, 110);
+}
+
+tr {
+    border-bottom: 1px solid rgb(225,225,225);
+}
+
+th {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+th .material-icons {
+    margin-left: 4px;
+}
+
+th:nth-child(3),
+th:nth-child(3) .material-icons,
+th:hover,
+th:hover .material-icons,
+td:nth-child(4),
+td:nth-child(6),
+td:nth-child(7)
+{
+    color: rgb(29, 56, 174);
+}
+
+.icon-reverse {
+    transform: rotate(180deg);
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+th, td {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 160px;
+    padding: 0 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+th:first-child,
+td:first-child {
+    width: 40px;
+    padding: 0;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 50px;
+}
+
+tbody tr:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+td {
+    color: rgb(25, 25, 25);
+}
+
+td:nth-child(3) {
+    font-weight: 600;
+}
+
+tr:hover td {
+    color: rgb(25, 25, 25);
+}
+
+tr:hover td:nth-child(3) {
+    text-decoration: underline;
+}
+
+td input:checked,
+tr:hover input,
+tr:hover svg,
+tr:hover span {
+    display: inline-block;
+}
+
+td input,
+td svg,
+td .material-icons {
+    display: none;
+    font-size: 20px;
+}
+
+td svg,
+td .material-icons {
+    margin-left: 8px;
+}
+
+.avatar {
+    height: 48px;
+    width: 48px;
+    background-color: rgb(200, 200, 200);
+    color: rgb(50, 50, 50);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

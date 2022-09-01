@@ -10,6 +10,7 @@
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -91,6 +92,59 @@
                 </div>
             </div>
         </div>
+        <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox"/>
+                    </th>
+                    <th> </th>
+                    <th class="">First Name <span class="material-icons icon-reverse">sort</span></th>
+                    <th>Company <span class="material-icons">sort</span></th>
+                    <th>Title <span class="material-icons">sort</span></th>
+                    <th>Email <span class="material-icons">sort</span></th>
+                    <th>Owned By <span class="material-icons">sort</span></th>
+                    <th>Street <span class="material-icons">sort</span></th>
+                    <th>Created <span class="material-icons">sort</span></th>
+                    <th>Last Contacted <span class="material-icons">sort</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox"/>
+                        <span class="material-icons">
+                            star_outline
+                        </span>
+                    </td>
+                    <td>
+                        <div class="avatar">IJ</div>
+                    </td>
+                    <td>
+                        Andreas Semmler <i data-feather="external-link"></i>
+                    </td>
+                    <td>
+                        Beyond Media Group
+                    </td>
+                    <td>
+                        Chief of Staff
+                    </td>
+                    <td>
+                        aman@arrowpc.co.in
+                    </td>
+                    <td>
+                        Self Serve
+                    </td>
+                    <td>
+                        1234 Main Street
+                    </td>
+                    <td>5/14/2022</td>
+                    <td>5/14/2022</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
     </main>
 </div>
 <aside></aside>
@@ -98,5 +152,8 @@
     <table id="content"></table>
 </main>
 <script src="index.js"></script>
+<script>
+    feather.replace()
+</script>
 </body>
 </html>

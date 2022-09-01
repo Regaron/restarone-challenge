@@ -647,13 +647,13 @@ td .material-icons {
 .drawer__detail__company,
 .drawer__detail__title,
 .drawer__detail__email,
-.drawer__detail__owner,
 .drawer__detail__dropdown,
 .drawer__detail__value {
   color: black;
   padding-top: 8px;
   font-size: 16px;
 }
+
 .drawer__detail__owner,
 .drawer__detail__dropdown {
   display: flex;

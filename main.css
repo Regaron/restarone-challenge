@@ -5,6 +5,8 @@
 }
 
 .sidebar {
+    position: absolute;
+    left: 0;
     background-color: rgb(46, 30, 62);
     color: white;
     height: 100vh;
@@ -46,7 +48,7 @@
     font-size: 12px;
 }
 
-#sidebar__content {
+#sidebar__nav {
     padding: 8px 0;
     flex: 1;
 }
@@ -60,7 +62,7 @@
     font-size: 16px;
 }
 
-.sidebar__item{
+.sidebar__item {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -77,14 +79,19 @@
 }
 
 .sidebar__item__badge {
+    width:16px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar__item__badge span {
     background-color: rgb(197, 201, 230);
     color: rgb(108, 118, 198);
-    text-align: center;
-    width:8px;
-    padding: 1px 4px;
-    margin-right: 8px;
-    border-radius: 2px;
     font-size: 12px;
+    text-align: center;
+    padding: 0 4px;
+    border-radius: 2px;
 }
 
 .sidebar__item__label {
@@ -105,5 +112,72 @@
 }
 .sidebar__footer .material-icons {
     color: white;
+    cursor: pointer;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    margin-left: 256px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.nav__item {
+    font-weight: 500;
+    font-size: 18px;
+    padding: 16px 0;
+    border-bottom: 3px solid rgb(112, 127, 212);
+}
+
+.searchbar {
+    position: relative;
+    width: 50%;
+}
+
+.searchbar input {
+    background-color: rgb(235, 240, 243);
+    border: 0;
+    height: 36px;
+    border-radius: 36px;
+    width: 100%;
+    padding: 0 48px;
+}
+
+.searchbar input::placeholder {
+    color: rgb(170, 170, 170);
+}
+
+.searchbar .material-icons {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+.header__action {
+    display: flex;
+    align-items: center;
+}
+
+.header__action .material-icons {
+    color: black;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.header__action :last-child {
+    color: rgb(146, 139, 154);
+}
+
+.header__action_text {
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    padding: 0 4px;
+    margin: 0 4px;
     cursor: pointer;
 }

@@ -31,7 +31,6 @@ var Model = (function () {
     }, {
         label: "Marketing Tools",
         leftIcon: "play_circle_outline",
-        badge: ""
     }, {
         label: "My Tracked Emails",
         leftIcon: "email",
@@ -39,7 +38,6 @@ var Model = (function () {
     }, {
         label: "Reports",
         leftIcon: "pie_chart",
-        badge: ""
     }, {
         label: "Legacy Reports",
         leftIcon: "insert_chart",
@@ -64,7 +62,7 @@ var UIController = (function () {
         if (sidebarItem.label !== "Divider") {
             sidebarHTML = "<li class='sidebar__item'>" +
                 "<span class='sidebar__item__badge'>" +
-                sidebarItem.badge +
+                (sidebarItem.badge > -1 ? "<span>"+sidebarItem.badge+"</span>" : "") +
                 "</span>" +
                 "<span class='material-icons sidebar__item__left-icon'>" +
                 sidebarItem.leftIcon +
@@ -85,7 +83,7 @@ var UIController = (function () {
             for (var i = 0; i < sidebarItems.length; i++) {
                 sidebarHTML += createSidebarItem(sidebarItems[i])
             }
-            document.getElementById("sidebar__content").innerHTML = sidebarHTML
+            document.getElementById("sidebar__nav").innerHTML = sidebarHTML
         },
         createTable(tableItems) {
             var tableItem = ""

@@ -338,6 +338,7 @@ header {
 .table-container {
   height: calc(100vh - 138px);
   overflow: auto;
+  position: relative;
 }
 
 table {
@@ -346,11 +347,20 @@ table {
 }
 
 thead tr {
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   color: rgb(110, 110, 110);
   position: sticky;
   top: 0;
   background-color: white;
+  border-bottom: 0;
+}
+
+.shadow-div {
+  top: 138px;
+  height: 64px;
+  width: 100%;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  z-index: 0;
+  position: fixed;
 }
 
 tr {
@@ -399,11 +409,6 @@ th>div, td>div {
 
 th>div {
   padding: 20px 8px;
-}
-
-th:first-child div,
-td:first-child div {
-  width: 30px;
 }
 
 th:nth-child(3),

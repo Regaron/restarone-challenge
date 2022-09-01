@@ -5,6 +5,7 @@ var Model = (function () {
       leftIcon: "home",
       badge: 1,
     },
+    {},
     {
       label: "Leads",
       leftIcon: "my_location",
@@ -31,6 +32,7 @@ var Model = (function () {
       leftIcon: "work",
       badge: 6,
     },
+    {},
     {
       label: "Tasks",
       leftIcon: "check_box",
@@ -54,6 +56,7 @@ var Model = (function () {
       leftIcon: "insert_chart",
       badge: 9,
     },
+    {},
     {
       label: "Settings",
       leftIcon: "settings",
@@ -198,10 +201,10 @@ function getInitials(name) {
 }
 
 var UIController = (function () {
-  function createSidebarItem(sidebarItem) {
+  function createSidebarItem(sidebarItem, index) {
     var sidebarHTML = "<li class='divider'></li>";
-    if (sidebarItem.label !== "Divider") {
-      sidebarHTML = `<li class='sidebar__item'>
+    if (sidebarItem.label) {
+      sidebarHTML = `<li class='sidebar__item ${index === 3 ? "sidebar__item--selected":""}'>
                 <span class='sidebar__item__badge'>
                     ${
                       sidebarItem.badge > -1
@@ -247,7 +250,7 @@ var UIController = (function () {
     createSidebar(sidebarItems) {
       var sidebarHTML = "";
       for (var i = 0; i < sidebarItems.length; i++) {
-        sidebarHTML += createSidebarItem(sidebarItems[i]);
+        sidebarHTML += createSidebarItem(sidebarItems[i], i);
       }
       document.getElementById("sidebar__nav").innerHTML = sidebarHTML;
     },

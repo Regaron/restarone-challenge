@@ -229,20 +229,22 @@ var UIController = (function () {
     var initials = getInitials(tableItem.firstName);
     return `<tr data-id="${index}">
             <td>
+            <div>
                 <input type="checkbox"/>
                 <span class="material-icons">
                     star_outline
                 </span>
+               </div>
             </td>
-            <td><div class="avatar">${initials}</div></td>
-            <td>${tableItem.firstName} <i data-feather="external-link"></i></td>
-            <td>${tableItem.company}</td>
-            <td>${tableItem.title || "-"}</td>
-            <td>${tableItem.email}</td>
-            <td>${tableItem.ownedBy || "-"}</td>
-            <td>${tableItem.street}</td>
-            <td>${tableItem.created}</td>
-            <td>${tableItem.lastContacted}</td>
+            <td><div><div class="avatar">${initials}</div><div></td>
+            <td><div>${tableItem.firstName}<i data-feather="external-link"></i></div> </td>
+            <td><div>${tableItem.company}</div></td>
+            <td><div>${tableItem.title || "-"}</div></td>
+            <td><div>${tableItem.email}</div></td>
+            <td><div>${tableItem.ownedBy || "-"}</div></td>
+            <td><div>${tableItem.street}</div></td>
+            <td><div>${tableItem.created}</div></td>
+            <td><div>${tableItem.lastContacted}</div></td>
         </tr>`;
   }
   var drawer = document.getElementById("drawer");

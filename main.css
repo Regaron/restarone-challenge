@@ -5,6 +5,14 @@
     transition: all 0.1s ease-in-out;
 }
 
+ul {
+    list-style-type: none;
+}
+
+input[type=checkbox] {
+    accent-color: rgb(29, 56, 174);
+}
+
 .sidebar {
     position: absolute;
     left: 0;
@@ -88,8 +96,8 @@
 
 .sidebar__item__badge span {
     background-color: rgb(197, 201, 230);
-    color: rgb(108, 118, 198);
-    font-size: 12px;
+    color: rgb(83, 91, 187);
+    font-size: 14px;
     text-align: center;
     padding: 0 4px;
     border-radius: 2px;
@@ -136,6 +144,7 @@ header {
     align-items: center;
     padding: 0 24px;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    z-index: 10;
 }
 
 .nav__item {
@@ -304,8 +313,6 @@ th .material-icons {
     margin-left: 4px;
 }
 
-th:nth-child(3),
-th:nth-child(3) .material-icons,
 th:hover,
 th:hover .material-icons,
 td:nth-child(4),
@@ -391,10 +398,157 @@ td .material-icons {
 .avatar {
     height: 48px;
     width: 48px;
-    background-color: rgb(200, 200, 200);
+    background-color: rgb(221, 227, 230);
     color: rgb(50, 50, 50);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.highlighted {
+    color: rgb(29, 56, 174) !important;
+}
+
+.disabled {
+    color: rgb(165, 165, 165) !important;
+}
+
+.drawer {
+    position: fixed;
+    right: 0;
+    top: 56px;
+    width: 400px;
+    height: calc(100vh - 56px);
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.drawer__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.drawer__actions .material-icons,
+.drawer__actions svg {
+    color: rgb(114, 114, 114);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.drawer__actions .material-icons:hover,
+.drawer__actions svg:hover {
+    color: rgb(29, 56, 174);
+}
+
+.drawer__actions div {
+    display: flex;
+    align-items: center;
+}
+
+.drawer__actions div .material-icons {
+    margin-left: 8px;
+}
+
+.drawer__user{
+    display: flex;
+    padding: 0 16px;
+    align-items: center;
+}
+
+.drawer__user>div:last-child {
+    padding-left: 16px;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.drawer__user__name {
+    font-weight: 600;
+}
+
+.drawer__user__company {
+    padding-top: 2px;
+    font-size: 14px;
+}
+
+.drawer__tabs {
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+    color: rgb(110, 110, 110);
+    border-bottom: 1px solid rgb(225, 225, 225);
+}
+.drawer__tabs li {
+    padding: 16px 0;
+    flex: 1;
+    text-align: center;
+    border-bottom: 3px solid rgb(255, 255, 255);
+}
+.drawer__tabs li:hover {
+    cursor: pointer;
+    border-bottom-color: rgb(29, 56, 174);
+    color: black;
+}
+.drawer__tabs li:first-child {
+    border-bottom-color: rgb(29, 56, 174);
+    color: black;
+}
+
+.drawer__details {
+    overflow: scroll;
+    flex: 1;
+}
+
+.drawer__detail-container {
+    padding: 16px;
+    font-size: 14px;
+    color: rgb(110, 110, 110);
+}
+.drawer__detail__label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    font-weight: 500;
+}
+.drawer__detail__label div {
+    display: flex;
+    align-items: center;
+}
+.drawer__detail-container .material-icons, .drawer__detail-container .material-icons-outlined {
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 4px;
+}
+.drawer__detail__label .material-icons:hover {
+    color: rgb(29, 56, 174);
+}
+.drawer__detail__dropdown,
+.drawer__detail__value {
+    color: black;
+    padding-top: 8px;
+    font-size: 14px;
+}
+.drawer__detail__dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.drawer__detail-container input {
+    padding-top: 8px;
+}
+
+.red-dot {
+    height: 4px;
+    width: 4px;
+    margin-left: 4px;
+    border-radius: 50%;
+    background-color: rgb(166, 36, 32);
 }

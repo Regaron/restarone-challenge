@@ -1,0 +1,96 @@
+* {
+    font-family: "Roboto Serif", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar {
+    background-color: rgb(46, 30, 62);
+    color: white;
+    height: 100vh;
+    width: 256px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 16px;
+}
+
+.sidebar__header .material-icons {
+    font-weight: bold;
+    color: white;
+}
+
+.sidebar__header__profile {
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+}
+
+.sidebar__header__profile img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.sidebar__profile__username {
+    padding-left: 8px;
+}
+
+.sidebar__profile__username :last-child {
+    font-size: 12px;
+}
+
+#sidebar__content {
+    padding: 8px 0;
+    flex: 1;
+}
+
+.material-icons {
+    color: rgb(146, 139, 154)
+}
+
+.sidebar__item__right-icon {
+    color: white;
+    font-size: 16px;
+}
+
+.sidebar__item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.sidebar__item--selected {
+    background-color: rgba(255,255,255,0.3);
+}
+
+.sidebar__item:hover {
+    background-color: rgba(255,255,255,0.2);
+    cursor: pointer;
+}
+
+.sidebar__item__badge {
+    background-color: rgb(197, 201, 230);
+    color: rgb(108, 118, 198);
+    text-align: center;
+    width:8px;
+    padding: 1px 4px;
+    margin-right: 8px;
+    border-radius: 2px;
+    font-size: 12px;
+}
+
+.sidebar__item__label {
+    width: 200px;
+    margin-left: 16px;
+}
+
+.sidebar__footer {
+    padding: 16px;
+}

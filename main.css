@@ -359,7 +359,7 @@ thead tr {
   height: 64px;
   width: 100%;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  z-index: 0;
+  z-index: 1;
   position: fixed;
 }
 
@@ -527,6 +527,7 @@ td .material-icons {
   height: calc(100vh - 56px);
   background-color: white;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.5);
+  z-index: 4;
 }
 
 #drawer.drawer--visible {

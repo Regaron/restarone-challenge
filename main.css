@@ -87,12 +87,17 @@ input[type="checkbox"] {
   padding: 8px 16px 8px 6px;
   border-left: 2px solid transparent;
   font-weight: 400;
+  font-size: 14px;
 }
 
 .sidebar__item--selected {
   background-color: rgba(255, 255, 255, 0.2);
   border-left-color: rgb(116, 127, 205);
   font-weight: 700;
+}
+
+.sidebar__item--selected .material-icons {
+  color: white;
 }
 
 .sidebar__item:hover {
@@ -389,7 +394,11 @@ th>div, td>div {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 16px 8px;
+  padding: 12px 8px;
+}
+
+th>div {
+  padding: 20px 8px;
 }
 
 th:first-child div,
@@ -399,12 +408,16 @@ td:first-child div {
 
 th:nth-child(3),
 td:nth-child(3) {
-  width: 18%;
+  width: 15%;
+}
+td:nth-child(3) {
+  border-right: 1px solid rgb(225, 225, 225);
 }
 
 th:nth-child(4),
 td:nth-child(4) {
   width: 15%;
+  padding-left: 12px;
 }
 
 th:nth-child(5),
@@ -483,6 +496,11 @@ td .material-icons {
   font-weight: 500;
 }
 
+.drawer__user .avatar {
+  height: 52px;
+  width: 52px;
+}
+
 .highlighted {
   color: rgb(29, 56, 174) !important;
 }
@@ -541,7 +559,7 @@ td .material-icons {
 
 .drawer__user {
   display: flex;
-  padding: 0 16px;
+  padding: 0 24px;
   align-items: center;
 }
 
@@ -554,6 +572,7 @@ td .material-icons {
 }
 
 .drawer__user__name {
+  font-size: 18px;
   font-weight: 600;
 }
 
@@ -574,6 +593,8 @@ td .material-icons {
   flex: 1;
   text-align: center;
   border-bottom: 3px solid rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 14px;
 }
 .drawer__tabs li:hover {
   cursor: pointer;
@@ -591,7 +612,7 @@ td .material-icons {
 }
 
 .drawer__detail-container {
-  padding: 16px;
+  padding: 16px 24px;
   font-size: 14px;
   color: rgb(110, 110, 110);
 }
@@ -625,7 +646,7 @@ td .material-icons {
 .drawer__detail__value {
   color: black;
   padding-top: 8px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .drawer__detail__owner,
 .drawer__detail__dropdown {
@@ -661,7 +682,7 @@ td .material-icons {
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 }
 
-.chat-bubble .material-icons {
+.chat-bubble .material-icons-outlined {
   color: white;
   font-size: 44px;
 }

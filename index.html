@@ -1,305 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>Restarone Solutions</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&display=swap"
-          rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined"
-          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/feather-icons"></script>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-<aside class="sidebar">
-    <div class="sidebar__header">
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar__header">
         <div class="sidebar__header__profile">
-            <img alt="profile-picture" src="https://picsum.photos/200"/>
-            <div class="sidebar__profile__username">
-                <div>Kelly Cheng</div>
-                <div>Cooper</div>
-            </div>
+          <img alt="profile-picture" src="https://picsum.photos/200" />
+          <div class="sidebar__profile__username">
+            <div>Kelly Cheng</div>
+            <div>Cooper</div>
+          </div>
         </div>
-        <span class="material-icons">
-            close
-        </span>
-    </div>
-    <ul id="sidebar__nav">
-    </ul>
-    <div class="sidebar__footer">
+        <span class="material-icons"> close </span>
+      </div>
+      <ul id="sidebar__nav"></ul>
+      <div class="sidebar__footer">
         <span>:copper</span>
-        <span class="material-icons">
-            more_horiz
-        </span>
-    </div>
-</aside>
-<div class="main-container">
-    <header>
+        <span class="material-icons"> more_horiz </span>
+      </div>
+    </aside>
+    <div class="main-container">
+      <header>
         <nav>
-            <div class="nav__item">People</div>
+          <div class="nav__item">People</div>
         </nav>
         <div class="searchbar">
-            <input placeholder="Search by name, email, domain or phone number"/>
-            <span class="material-icons">
-                search
-            </span>
+          <input placeholder="Search by name, email, domain or phone number" />
+          <span class="material-icons"> search </span>
         </div>
         <div class="header__action">
-            <span class="material-icons">
-                add
-            </span>
-            <span class="material-icons">
-                notifications
-            </span>
-            <span class="header__action__text">P</span>
-            <span class="material-icons">
-                help
-            </span>
+          <span class="material-icons"> add </span>
+          <span class="material-icons"> notifications </span>
+          <span class="header__action__text">P</span>
+          <span class="material-icons"> help </span>
         </div>
-    </header>
-    <main>
+      </header>
+      <main>
         <div class="table-top">
-            <div class="dropdown">
-                All People (156663)
-                <span class="material-icons">
-                    arrow_drop_down
-                </span>
+          <div class="dropdown">
+            All People (156663)
+            <span class="material-icons"> arrow_drop_down </span>
+          </div>
+          <button class="btn--add">
+            Add New
+            <span class="btn__divider"></span>
+            <span class="material-icons"> arrow_drop_down </span>
+          </button>
+          <div class="table-filter">
+            <span class="material-icons"> search </span>
+            <span class="material-icons"> person </span>
+            <span class="material-icons"> settings </span>
+            <div class="material-icons-label">
+              <span class="material-icons"> filter_list </span>
+              <span>Filters</span>
             </div>
-            <button class="btn--add">Add New
-                <span class="btn__divider"></span>
-                <span class="material-icons">
-                    arrow_drop_down
-                </span>
-            </button>
-            <div class="table-filter">
-                <span class="material-icons">
-                    search
-                </span>
-                <span class="material-icons">
-                    person
-                </span>
-                <span class="material-icons">
-                    settings
-                </span>
-                <div class="material-icons-label">
-                    <span class="material-icons">
-                        filter_list
-                    </span>
-                    <span>Filters</span>
-                </div>
-            </div>
+          </div>
         </div>
         <div class="table-container">
-        <table>
+          <table>
             <thead>
-                <tr>
-                    <th>
-                        <input type="checkbox"/>
-                    </th>
-                    <th> </th>
-                    <th class="highlighted">First Name <span class="material-icons icon-reverse highlighted">sort</span></th>
-                    <th>Company <span class="material-icons">sort</span></th>
-                    <th>Title <span class="material-icons">sort</span></th>
-                    <th>Email <span class="material-icons">sort</span></th>
-                    <th>Owned By <span class="material-icons">sort</span></th>
-                    <th>Street <span class="material-icons">sort</span></th>
-                    <th>Created <span class="material-icons">sort</span></th>
-                    <th>Last Contacted <span class="material-icons">sort</span></th>
-                </tr>
+              <tr>
+                <th>
+                  <input type="checkbox" />
+                </th>
+                <th></th>
+                <th class="highlighted">
+                  First Name
+                  <span class="material-icons icon-reverse highlighted"
+                    >sort</span
+                  >
+                </th>
+                <th>Company <span class="material-icons">sort</span></th>
+                <th>Title <span class="material-icons">sort</span></th>
+                <th>Email <span class="material-icons">sort</span></th>
+                <th>Owned By <span class="material-icons">sort</span></th>
+                <th>Street <span class="material-icons">sort</span></th>
+                <th>Created <span class="material-icons">sort</span></th>
+                <th>Last Contacted <span class="material-icons">sort</span></th>
+              </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <input type="checkbox"/>
-                        <span class="material-icons">
-                            star_outline
-                        </span>
-                    </td>
-                    <td>
-                        <div class="avatar">IJ</div>
-                    </td>
-                    <td>
-                        Andreas Semmler <i data-feather="external-link"></i>
-                    </td>
-                    <td>
-                        Beyond Media Group
-                    </td>
-                    <td>
-                        Chief of Staff
-                    </td>
-                    <td>
-                        aman@arrowpc.co.in
-                    </td>
-                    <td>
-                        Self Serve
-                    </td>
-                    <td>
-                        1234 Main Street
-                    </td>
-                    <td>5/14/2022</td>
-                    <td>5/14/2022</td>
-                </tr>
-            </tbody>
-        </table>
+            <tbody id="table-data"></tbody>
+          </table>
         </div>
-    </main>
-</div>
-<aside class="drawer">
-    <div class="drawer__actions">
-        <span id="close-drawer" class="material-icons">
-            arrow_forward
-        </span>
-        <div>
-            <i data-feather="external-link"></i>
-            <span class="material-icons">
-                star_outline
-            </span>
-            <span class="material-icons">
-                more_vert
-            </span>
-        </div>
+      </main>
     </div>
-    <div class="drawer__user">
-        <div class="avatar">IJ</div>
+    <aside id="drawer">
+      <div class="drawer__actions">
+        <span id="close-drawer" class="material-icons"> arrow_forward </span>
         <div>
-            <div class="drawer__user__name">dadasdasdas</div>
-            <div class="drawer__user__company">dsadasdasdas</div>
+          <i data-feather="external-link"></i>
+          <span class="material-icons"> star_outline </span>
+          <span class="material-icons"> more_vert </span>
         </div>
-    </div>
-    <ul class="drawer__tabs">
+      </div>
+      <div class="drawer__user">
+        <div class="avatar"></div>
+        <div>
+          <div class="drawer__user__name"></div>
+          <div class="drawer__user__company"></div>
+        </div>
+      </div>
+      <ul class="drawer__tabs">
         <li>DETAILS</li>
         <li>ACTIVITY</li>
         <li>RELATED</li>
-    </ul>
-    <div class="drawer__details">
+      </ul>
+      <div class="drawer__details">
         <div class="drawer__detail-container">
-            <div class="drawer__detail__label">
-                <div>
-                    Name
-                    <div class="red-dot"></div>
-                </div>
-                <span class="material-icons">
-                    content_copy
-                </span>
+          <div class="drawer__detail__label">
+            <div>
+              Name
+              <div class="red-dot"></div>
             </div>
-            <div class="drawer__detail__value">dasdasdasd</div>
+            <span class="material-icons"> content_copy </span>
+          </div>
+          <div class="drawer__detail__name"></div>
         </div>
         <div class="drawer__detail-container">
-            <div class="drawer__detail__label">
-                <div>Company</div>
-            </div>
-            <div class="drawer__detail__value highlighted">dasdasdasd</div>
+          <div class="drawer__detail__label">
+            <div>Company</div>
+          </div>
+          <div class="drawer__detail__company highlighted"></div>
         </div>
         <div class="drawer__detail-container">
-            <div class="drawer__detail__label">
-                <div>Title</div>
-            </div>
-            <div class="drawer__detail__value disabled">Add Title</div>
+          <div class="drawer__detail__label">
+            <div>Title</div>
+          </div>
+          <div class="drawer__detail__title"></div>
         </div>
         <div class="drawer__detail-container">
-            <div class="drawer__detail__label">
-                <div>
-                    Work Email
-                    <span class="material-icons">
-                        arrow_drop_down
-                    </span>
-                </div>
+          <div class="drawer__detail__label">
+            <div>
+              Work Email
+              <span class="material-icons"> arrow_drop_down </span>
             </div>
-            <div class="drawer__detail__value">dasdasdasd</div>
+          </div>
+          <div class="drawer__detail__email"></div>
         </div>
         <div class="drawer__detail-container">
-            <div class="drawer__detail__label">
-                <div>
-                    Work Phone
-                    <span class="material-icons">
-                        arrow_drop_down
-                    </span>
-                </div>
+          <div class="drawer__detail__label">
+            <div>
+              Work Phone
+              <span class="material-icons"> arrow_drop_down </span>
             </div>
-            <div class="drawer__detail__value">412412412</div>
+          </div>
+          <div class="drawer__detail__value">412412412</div>
         </div>
         <div class="drawer__detail-container">
-            <div class="drawer__detail__label">
-                <div>Rating</div>
-            </div>
-            <div class="drawer__detail__dropdown">
-                - Select Rating -
-                <span class="material-icons">
-                    arrow_drop_down
-                </span>
-            </div>
+          <div class="drawer__detail__label">
+            <div>Rating</div>
+          </div>
+          <div class="drawer__detail__dropdown">
+            - Select Rating -
+            <span class="material-icons"> arrow_drop_down </span>
+          </div>
         </div>
         <div class="drawer__detail-container">
-            <div class="drawer__detail__label">
-                <div>Status</div>
-            </div>
-            <div class="drawer__detail__dropdown">
-                - Select Status -
-                <span class="material-icons">
-                    arrow_drop_down
-                </span>
-            </div>
+          <div class="drawer__detail__label">
+            <div>Status</div>
+          </div>
+          <div class="drawer__detail__dropdown">
+            - Select Status -
+            <span class="material-icons"> arrow_drop_down </span>
+          </div>
         </div>
         <div class="drawer__detail-container">
-            <div class="drawer__detail__label">
-                <div>Recycled Reasons</div>
-            </div>
-            <div class="drawer__detail__dropdown">
-                - Select Recycled Reason -
-                <span class="material-icons">
-                    arrow_drop_down
-                </span>
-            </div>
+          <div class="drawer__detail__label">
+            <div>Recycled Reasons</div>
+          </div>
+          <div class="drawer__detail__dropdown">
+            - Select Recycled Reason -
+            <span class="material-icons"> arrow_drop_down </span>
+          </div>
         </div>
         <div class="drawer__detail-container">
-            <div class="drawer__detail__label">
-                <div>Owner</div>
-            </div>
-            <div class="drawer__detail__dropdown highlighted">
-                dasdasdasd
-                <span class="material-icons">
-                    close
-                </span>
-            </div>
+          <div class="drawer__detail__label">
+            <div>Owner</div>
+          </div>
+          <div class="drawer__detail__owner highlighted">
+            <span class="material-icons"> close </span>
+          </div>
         </div>
         <div class="drawer__detail-container">
-            <div class="drawer__detail__label">
-                <div>AE Assignee</div>
-            </div>
-            <div class="drawer__detail__dropdown">
-                - Select AE Assignee -
-                <span class="material-icons">
-                    arrow_drop_down
-                </span>
-            </div>
+          <div class="drawer__detail__label">
+            <div>AE Assignee</div>
+          </div>
+          <div class="drawer__detail__dropdown">
+            - Select AE Assignee -
+            <span class="material-icons"> arrow_drop_down </span>
+          </div>
         </div>
         <div class="drawer__detail-container">
-            <div class="drawer__detail__label">
-                <div>Account Owner</div>
-            </div>
-            <div class="drawer__detail__value">
-                <input type="checkbox" checked/>
-            </div>
+          <div class="drawer__detail__label">
+            <div>Account Owner</div>
+          </div>
+          <div class="drawer__detail__value">
+            <input type="checkbox" checked />
+          </div>
         </div>
         <div class="drawer__detail-container">
-            <div class="drawer__detail__label">
-                <div>
-                    Company Size
-                    <span class="material-icons-outlined">
-                        lock
-                    </span>
-                </div>
+          <div class="drawer__detail__label">
+            <div>
+              Company Size
+              <span class="material-icons-outlined"> lock </span>
             </div>
-            <div class="drawer__detail__value">100</div>
+          </div>
+          <div class="drawer__detail__value">100</div>
         </div>
+      </div>
+    </aside>
+    <div class="chat-bubble">
+      <span class="material-icons"> live_help </span>
     </div>
-</aside>
-<script src="index.js"></script>
-<script>
-    feather.replace()
-</script>
-</body>
+    <script src="index.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
 </html>
